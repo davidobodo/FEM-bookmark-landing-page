@@ -9,28 +9,34 @@ body {
   font-family: sans-serif; }
 
 h1 {
-  font-size: 32px; }
+  font-size: 32px;
+  font-weight: bold; }
 
 h2 {
-  font-size: 24px; }
+  font-size: 30px;
+  font-weight: bold; }
 
 h3 {
-  font-size: 18px; }
+  font-size: 24px;
+  font-weight: bold; }
 
 h4 {
-  font-size: 16px; }
+  font-size: 16px;
+  font-weight: bold; }
 
 h5 {
-  font-size: 13px; }
+  font-size: 13px;
+  font-weight: bold; }
 
 h6 {
-  font-size: 11px; }
+  font-size: 11px;
+  font-weight: bold; }
 
 p {
-  font-size: 14px; }
-
-.btn {
-  font-size: 14px; }
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 24px;
+  color: #9d9ea3; }
 
 .font-light {
   font-weight: 200 !important; }
@@ -41,15 +47,90 @@ p {
 .font-bolder {
   font-weight: 600 !important; }
 
+.btn {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none; }
+
+.btn-purple {
+  color: #ffffff;
+  background-color: #5365e1; }
+
+.btn-white {
+  color: #000000;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2); }
+
 .nav h3 {
   text-transform: uppercase; }
 
-.section__four a {
-  font-size: 14px;
-  text-decoration: none; }
+.header {
+  text-align: center;
+  margin-bottom: 150px; }
+  .header h2 {
+    margin-bottom: 30px; }
+  .header p {
+    margin-bottom: 30px; }
+  .header__buttons-wrapper {
+    display: flex;
+    justify-content: space-around; }
+
+.section__one {
+  text-align: center; }
+  .section__one h3 {
+    margin-bottom: 15px; }
+  .section__one p {
+    margin-bottom: 35px; }
+
+.section__two {
+  text-align: center;
+  margin-bottom: 150px; }
+  .section__two h3 {
+    margin-bottom: 15px; }
+
+.section__three {
+  text-align: center;
+  margin-bottom: 150px; }
+  .section__three h3 {
+    margin-bottom: 15px; }
+  .section__three p {
+    margin-bottom: 35px; }
+
+.section__four {
+  text-align: center;
+  margin-bottom: 120px; }
+  .section__four h3 {
+    margin-bottom: 15px; }
+  .section__four p {
+    margin-bottom: 35px; }
+  .section__four a {
+    font-size: 14px;
+    text-decoration: none; }
+
+.section__five {
+  background-color: #5266df;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px; }
+  .section__five h5 {
+    color: #ffffff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 15px; }
+  .section__five h3 {
+    margin-bottom: 30px; }
+  .section__five form {
+    display: flex;
+    flex-direction: column; }
 
 .footer li {
   font-size: 13px;
   text-transform: uppercase; }
+
+.wrapper {
+  padding: 30px 30px 0 30px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,27 +1,48 @@
 h1{
     font-size: 32px;
+    font-weight: bold;
 }
 
 h2{
-    font-size: 24px;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 h3{
-    font-size: 18px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 h4{
     font-size: 16px;
+    font-weight: bold;
 }
 
 h5{
     font-size: 13px;
+    font-weight: bold;
 }
 
 h6{
     font-size: 11px;
+    font-weight: bold;
 }
 
 p{
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 24px;
+    color: $paragraph-color;
+}
+
+.font-light{
+    font-weight: 200 !important;
+}
+
+.font-bold{
+    font-weight: 400 !important;
+}
+
+.font-bolder{
+    font-weight: 600 !important;
 }

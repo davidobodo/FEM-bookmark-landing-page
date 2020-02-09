@@ -1,0 +1,17 @@
+.header{
+    text-align: center;
+    margin-bottom: 150px;
+
+    h2{
+        margin-bottom: 30px;
+    }
+
+    p{
+        margin-bottom: 30px;
+    }
+
+    &__buttons-wrapper{
+        display: flex;
+        justify-content: space-around;
+    }
+}
