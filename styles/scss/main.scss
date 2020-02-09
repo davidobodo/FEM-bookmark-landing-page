@@ -1,21 +1,18 @@
+@import "base/reset"; // all resets 
+@import "base/typography";
+
 @import "utils/functions";
 @import "utils/mixins";
 @import "utils/variables";
-
-@import "base/reset"; // all resets 
-@import "base/typography";
 
 @import "components/buttons";
 
 @import "layouts/navbar";
 @import "layouts/sidebar";
+@import "layouts/header";
+@import "layouts/body";
+@import "layouts/footer";
 
-@import "pages/about";
-@import "pages/contact";
-@import "pages/home";
 
-@import "themes/admin";
-@import "themes/theme";
 
-@import "vendors/bootstrap";
 

@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA;;OAEO;EACH,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;;AAG1B,IAAI;EACA,WAAW,EAAE,UAAU;;ACT3B,EAAE;EACE,SAAS,EAAE,IAAI;;AAGnB,EAAE;EACE,SAAS,EAAE,IAAI;;AAGnB,EAAE;EACE,SAAS,EAAE,IAAI;;AAGnB,EAAE;EACE,SAAS,EAAE,IAAI;;AAGnB,EAAE;EACE,SAAS,EAAE,IAAI;;AAGnB,EAAE;EACE,SAAS,EAAE,IAAI;;AAGnB,CAAC;EACG,SAAS,EAAE,IAAI;;ACzBnB,IAAI;EACA,SAAS,EAAE,IAAI;;ACCf,gBAAC;EACG,SAAS,EAAE,IAAI;EACf,eAAe,EAAE,IAAI;;ACFzB,UAAE;EACE,SAAS,EAAE,IAAI;EACf,cAAc,EAAE,SAAS",
+"sources": ["../scss/base/_reset.scss","../scss/base/_typography.scss","../scss/components/_buttons.scss","../scss/layouts/_body.scss","../scss/layouts/_footer.scss"],
 "names": [],
 "file": "style.css"
 }
