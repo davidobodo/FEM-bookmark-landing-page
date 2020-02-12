@@ -31,7 +31,7 @@
                 content: '';
                 width: 130px;
                 height: 5px;
-                background-color: red;
+                background-color: #fc5859;
                 position: absolute;
                 left: 50%;
                 transform: translateX(-50%);
@@ -54,14 +54,14 @@
 
         &:after{
             content: '';
-            width: 300px;
-            height: 190px;
+            width: 100%;
+            height: 85%;
             background-color: #4d61d2;
             position: absolute;
-            left: 70px;
+            right: 70px;
             top: 60px;
-            border-top-right-radius: 50%;
-            border-bottom-right-radius: 30%;
+            border-top-right-radius: 200px;
+            border-bottom-right-radius: 200px;
             z-index: -1;
         }
 
@@ -196,16 +196,6 @@
 
         ::placeholder{
             opacity: 0.4;
-        }
-
-        button{
-            font-size: 12px;
-            font-weight: 600;
-            padding: 15px;
-            border-radius: 5px;
-            border: none;
-            background-color: #fb5859;
-            color: #ffffff;
         }
     }
 }

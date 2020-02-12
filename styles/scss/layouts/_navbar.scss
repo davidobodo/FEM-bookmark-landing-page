@@ -2,8 +2,34 @@
     padding-left: $pad-left;
     padding-right: $pad-right;
     margin-bottom: 70px;
+    display: flex;
+    justify-content: space-between;
 
     h3{
         text-transform: uppercase;
+    }
+
+    &__links{
+
+        a{
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #000000;
+            margin-right: 60px;
+            letter-spacing: 2px;
+
+            &:last-child{
+                margin-right: 0;
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+        }
+    }
+
+
+
+    @media(min-width: 765px){
+        padding-left: $pad-left-desktop;
+        padding-right: $pad-right-desktop;
     }
 }
