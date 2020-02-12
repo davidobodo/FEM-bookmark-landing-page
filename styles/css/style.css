@@ -100,11 +100,33 @@ p {
     justify-content: space-around; }
 
 .section__one {
-  text-align: center; }
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 80px; }
   .section__one h3 {
     margin-bottom: 15px; }
   .section__one p {
     margin-bottom: 35px; }
+  .section__one__list li {
+    font-size: 16px;
+    font-weight: bold;
+    list-style: none;
+    padding: 20px;
+    color: #5f5f67;
+    border-top: 1px solid #dfdfe7;
+    position: relative; }
+    .section__one__list li:last-child {
+      border-bottom: 1px solid #dfdfe7; }
+    .section__one__list li:after {
+      content: '';
+      width: 130px;
+      height: 5px;
+      background-color: red;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0; }
 
 .section__two {
   text-align: center;
