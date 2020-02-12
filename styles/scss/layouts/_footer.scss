@@ -14,4 +14,11 @@
         list-style: none;
         margin-bottom: 30px;
     }
+
+    &__social-media{
+        display: flex;
+        justify-content: space-evenly;
+        width: 50%;
+        margin: 0 auto;
+    }
 }

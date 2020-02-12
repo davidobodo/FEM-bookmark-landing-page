@@ -130,35 +130,91 @@ p {
 
 .section__two {
   text-align: center;
-  margin-bottom: 150px; }
+  margin-bottom: 150px;
+  padding-left: 30px;
+  padding-right: 30px; }
+  .section__two__tab-img {
+    position: relative;
+    margin-bottom: 70px; }
+    .section__two__tab-img:after {
+      content: '';
+      width: 300px;
+      height: 190px;
+      background-color: #4d61d2;
+      position: absolute;
+      left: 70px;
+      top: 60px;
+      border-top-right-radius: 50%;
+      border-bottom-right-radius: 30%;
+      z-index: -1; }
+    .section__two__tab-img img {
+      width: 100%; }
   .section__two h3 {
     margin-bottom: 15px; }
 
 .section__three {
   text-align: center;
-  margin-bottom: 150px; }
+  margin-bottom: 150px;
+  padding-left: 30px;
+  padding-right: 30px; }
   .section__three h3 {
     margin-bottom: 15px; }
   .section__three p {
     margin-bottom: 35px; }
+  .section__three .cards {
+    box-shadow: 0 100px 80px rgba(0, 0, 0, 0.07);
+    padding-top: 50px;
+    padding-bottom: 30px;
+    border-radius: 10px; }
+    .section__three .cards img {
+      margin-bottom: 30px; }
+    .section__three .cards h4 {
+      margin-bottom: 10px; }
+    .section__three .cards hr {
+      height: 14px;
+      overflow: hidden;
+      border: none;
+      margin-bottom: 35px; }
+      .section__three .cards hr:after {
+        content: '.........................................';
+        letter-spacing: 12px; }
 
 .section__four {
   text-align: center;
-  margin-bottom: 120px; }
+  margin-bottom: 120px;
+  padding-left: 30px;
+  padding-right: 30px; }
   .section__four h3 {
     margin-bottom: 15px; }
   .section__four p {
     margin-bottom: 35px; }
-  .section__four a {
-    font-size: 14px;
-    text-decoration: none; }
+  .section__four__faqs {
+    margin-bottom: 50px; }
+    .section__four__faqs__faq {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #dfdfe7; }
+      .section__four__faqs__faq a {
+        text-decoration: none;
+        color: #000000; }
+      .section__four__faqs__faq .dropdown-direction {
+        border-left: 3px solid #5266df;
+        border-bottom: 3px solid #5266df;
+        width: 13px;
+        height: 13px;
+        transform: rotate(-45deg); }
 
 .section__five {
   background-color: #5266df;
   color: #ffffff;
   text-align: center;
   padding-top: 80px;
-  padding-bottom: 80px; }
+  padding-bottom: 80px;
+  padding-left: 30px;
+  padding-right: 30px; }
   .section__five h5 {
     color: #ffffff;
     letter-spacing: 4px;
@@ -198,6 +254,11 @@ p {
     font-size: 13px;
     list-style: none;
     margin-bottom: 30px; }
+  .footer__social-media {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: 0 auto; }
 
 .wrapper {
   padding-top: 50px; }
