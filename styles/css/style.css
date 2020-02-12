@@ -63,8 +63,11 @@ p {
   background-color: #ffffff;
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2); }
 
-.nav h3 {
-  text-transform: uppercase; }
+.nav {
+  padding-left: 30px;
+  padding-right: 30px; }
+  .nav h3 {
+    text-transform: uppercase; }
 
 .header {
   text-align: center;
@@ -125,12 +128,37 @@ p {
   .section__five form {
     display: flex;
     flex-direction: column; }
+    .section__five form input {
+      font-size: 12px;
+      padding: 15px;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 20px; }
+    .section__five form ::placeholder {
+      opacity: 0.4; }
+    .section__five form button {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 15px;
+      border-radius: 5px;
+      border: none;
+      background-color: #fb5859;
+      color: #ffffff; }
 
-.footer li {
-  font-size: 13px;
+.footer {
+  background-color: #242946;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px;
   text-transform: uppercase; }
+  .footer__brand {
+    margin-bottom: 40px; }
+  .footer li {
+    font-size: 13px;
+    list-style: none;
+    margin-bottom: 30px; }
 
 .wrapper {
-  padding: 30px 30px 0 30px; }
+  padding-top: 50px; }
 
 /*# sourceMappingURL=style.css.map */

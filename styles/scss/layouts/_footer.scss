@@ -1,7 +1,17 @@
 .footer{
+    background-color: #242946;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px;
+    text-transform: uppercase;
+
+    &__brand{
+        margin-bottom: 40px;
+    }
 
     li{
         font-size: 13px;
-        text-transform: uppercase;
+        list-style: none;
+        margin-bottom: 30px;
     }
 }
