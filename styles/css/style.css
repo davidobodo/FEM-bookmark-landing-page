@@ -273,27 +273,40 @@ p {
       padding-right: 10vw; } }
   .section__three h3 {
     margin-bottom: 15px; }
-  .section__three p {
+  .section__three__subtitle {
+    font-size: 17px;
     margin-bottom: 35px; }
     @media (min-width: 765px) {
-      .section__three p {
+      .section__three__subtitle {
         width: 460px;
         margin: 0 auto 50px; } }
-  .section__three .cards {
+  @media (min-width: 765px) {
+    .section__three__cards-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start; } }
+  .section__three__cards-container .cards {
     box-shadow: 0 100px 80px rgba(0, 0, 0, 0.07);
     padding-top: 50px;
     padding-bottom: 30px;
     border-radius: 10px; }
-    .section__three .cards img {
+    @media (min-width: 765px) {
+      .section__three__cards-container .cards {
+        width: 30%; }
+        .section__three__cards-container .cards:nth-child(2) {
+          margin-top: 50px; }
+        .section__three__cards-container .cards:nth-child(3) {
+          margin-top: 100px; } }
+    .section__three__cards-container .cards img {
       margin-bottom: 30px; }
-    .section__three .cards h4 {
+    .section__three__cards-container .cards h4 {
       margin-bottom: 10px; }
-    .section__three .cards hr {
+    .section__three__cards-container .cards hr {
       height: 14px;
       overflow: hidden;
       border: none;
       margin-bottom: 35px; }
-      .section__three .cards hr:after {
+      .section__three__cards-container .cards hr:after {
         content: '.........................................';
         letter-spacing: 12px; }
 

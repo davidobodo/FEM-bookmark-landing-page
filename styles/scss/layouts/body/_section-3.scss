@@ -5,7 +5,7 @@
     padding-left: $pad-left;
     padding-right: $pad-right;
 
-    @media(min-width: 765px){
+    @media(min-width: $mobile-breakpoint){
         padding-left: $pad-left-desktop;
         padding-right: $pad-right-desktop;
     }
@@ -14,7 +14,8 @@
         margin-bottom: 15px;
     }
 
-    p{
+    &__subtitle{
+        font-size: 17px;
         margin-bottom: 35px;
 
         @media(min-width: 765px){
@@ -23,32 +24,54 @@
         }
     }
 
-    .cards{
-        box-shadow: 0 100px 80px rgba(0, 0, 0, 0.07);
-        padding-top: 50px;
-        padding-bottom: 30px;
-        border-radius: 10px;
+    &__cards-container{
 
-        img{
-            margin-bottom: 30px;
+        @media(min-width: $mobile-breakpoint){
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
         }
 
-        h4{
-            margin-bottom: 10px;
-        }
 
-        hr{
-            height: 14px;
-            overflow: hidden;
-            border: none;
-            margin-bottom: 35px;
+        .cards{
+            box-shadow: 0 100px 80px rgba(0, 0, 0, 0.07);
+            padding-top: 50px;
+            padding-bottom: 30px;
+            border-radius: 10px;
 
-            &:after{
-                content: '.........................................';
-                letter-spacing: 12px;
+            @media(min-width: $mobile-breakpoint){
+                width: 30%;
+
+                &:nth-child(2){
+                    margin-top: 50px;
+                }
+
+                &:nth-child(3){
+                    margin-top: 100px;
+                }
             }
-        }
 
-     
+            img{
+                margin-bottom: 30px;
+            }
+
+            h4{
+                margin-bottom: 10px;
+            }
+
+            hr{
+                height: 14px;
+                overflow: hidden;
+                border: none;
+                margin-bottom: 35px;
+
+                &:after{
+                    content: '.........................................';
+                    letter-spacing: 12px;
+                }
+            }
+
+        
+        }
     }
 }
