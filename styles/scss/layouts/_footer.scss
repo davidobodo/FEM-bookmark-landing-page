@@ -5,14 +5,37 @@
     padding: 40px;
     text-transform: uppercase;
 
-    &__brand{
-        margin-bottom: 40px;
+    @media(min-width: $mobile-breakpoint){
+        display: flex;
+        align-items: center;
+        padding: 25px $pad-left-desktop;
     }
 
-    li{
-        font-size: 13px;
-        list-style: none;
-        margin-bottom: 30px;
+    &__brand{
+        margin-bottom: 40px;
+
+        @media(min-width: $mobile-breakpoint){
+            margin-bottom: 0;
+            margin-right: 70px;
+        }
+    }
+
+    ul{
+        @media(min-width: $mobile-breakpoint){
+            display: flex;
+            flex: 1;
+        }
+        
+        li{
+            font-size: 13px;
+            list-style: none;
+            margin-bottom: 30px;
+
+            @media(min-width: $mobile-breakpoint){
+                margin-right: 60px;
+                margin-bottom: 0;
+            }
+        }
     }
 
     &__social-media{
@@ -20,5 +43,17 @@
         justify-content: space-evenly;
         width: 50%;
         margin: 0 auto;
+
+        img:first-child{
+
+            @media(min-width: $mobile-breakpoint){
+                margin-right: 40px;
+            }
+
+        }
+
+        @media(min-width: $mobile-breakpoint){
+            width: auto;
+        }
     }
 }
