@@ -7,6 +7,7 @@
     &__image{
         position: relative;
         margin-bottom: 70px;
+       
 
         &:after{
             content: '';
@@ -23,25 +24,57 @@
 
         img{
             width: 100%;
-
         }
     }
 
-    h2{
-        margin-bottom: 30px;
-    }
+    &__info{
 
-    p{
-        margin-bottom: 30px;
-    }
+        h2{
+            margin-bottom: 30px;
+        }
 
-    &__buttons-wrapper{
-        display: flex;
-        justify-content: space-around;
+        p{
+            margin-bottom: 30px;
+        }
+
+        &__buttons-wrapper{
+            display: flex;
+            justify-content: space-around;
+        }
     }
 
     @media(min-width: 765px){
         padding-left: $pad-left-desktop;
         padding-right: $pad-right-desktop;
+        display: flex;
+        align-items: center;
+        height: 400px;
+        text-align: left;
+
+        &__image{
+            order: 1;
+            flex: 0 0 50%;
+
+            &:after{
+                left: 146px;
+            }
+        }
+
+        &__info{
+            flex: 0 0 50%;
+            padding-right: 150px;
+
+            h2{
+                font-size: 34px;
+            }
+            
+            &__buttons-wrapper{
+                display: block;
+                
+                button:first-child{
+                    margin-right: 20px;
+                }
+            }
+        }
     }
 }
