@@ -5,6 +5,10 @@
     display: flex;
     justify-content: space-between;
 
+    @media(min-width: $mobile-breakpoint){
+        align-items: center;
+    }
+
     h3{
         text-transform: uppercase;
     }
@@ -15,6 +19,10 @@
         background-color: #000000;
         position: relative;
         align-self: center;
+
+        @media(min-width: $mobile-breakpoint){
+            display: none;
+        }
 
         &:before{
             content: '';
@@ -50,14 +58,28 @@
         text-align: center;
         padding-top: 50px;
         transition: all 0.3s ease-in-out;
-
         transform: translateX(100vw);
+
+        @media(min-width: $mobile-breakpoint){
+            transform: translateX(0px);
+            position: static;
+            height: auto;
+            background-color: transparent;
+            flex-direction: row;
+            padding: 0;
+            width: auto;
+        }
+
 
         &__brand{
             margin-bottom: 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            @media(min-width: $mobile-breakpoint){
+                display: none;
+            }
 
             .cancel-icon{
                 width: 25px;
@@ -81,6 +103,12 @@
             flex-direction: column;
             margin-bottom: 10px;
 
+            @media(min-width: $mobile-breakpoint){
+                flex-direction: row;
+                align-items: center;
+                margin-bottom: 0;
+            }
+
             a{
                 text-decoration: none;
                 text-transform: uppercase;
@@ -93,12 +121,20 @@
 
                 @media(min-width: $mobile-breakpoint){
                     color: #000000;
-                    margin-right: 60px
+                    margin-right: 60px;
+                    padding: 0;
+                    margin-bottom: 0;
+                    font-size: 14px;
                 }
 
                 &:last-child{
                     border-bottom: 1px solid rgba(255,255,255, 0.3);
                     padding-bottom: 20px;
+
+                    @media(min-width: $mobile-breakpoint){
+                        padding-bottom: 0;
+                        border-bottom: none;
+                    }
                 }
             }
         }
@@ -115,6 +151,19 @@
                 font-size: 18px;
                 border: 2px solid #ffffff;
                 border-radius: 5px;
+
+                @media(min-width: $mobile-breakpoint){
+                    font-size: 14px;
+                    font-weight: 600;
+                    padding: 15px;
+                    padding-left: 40px;
+                    padding-right: 40px;
+                    border-radius: 5px;
+                    border: none;
+                    background-color: #fb5859;
+                    color: #ffffff !important;
+                }
+
             }
         }
 
@@ -123,6 +172,10 @@
 
             img:first-child{
                 margin-right: 40px;
+            }
+
+            @media(min-width: $mobile-breakpoint){
+                display: none;
             }
         }
 
