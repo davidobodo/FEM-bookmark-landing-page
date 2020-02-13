@@ -9,7 +9,7 @@
 
 @import "layouts/navbar";
 @import "layouts/header";
-@import "layouts/body";
+@import "layouts/body/body";
 @import "layouts/footer";
 
 
@@ -21,6 +21,7 @@
 
     @media(min-width: 765px){
         padding-top: $pad-top-desktop;
+        border: 5px solid green;
     }
 }
 

@@ -11,6 +11,10 @@ h2{
 h3{
     font-size: 24px;
     font-weight: bold;
+
+    @media(min-width: 765px){
+        font-size: 32px;
+    }
 }
 
 h4{
@@ -33,6 +37,11 @@ p{
     font-weight: normal;
     line-height: 24px;
     color: $paragraph-color;
+
+    @media(min-width: 765px){
+        font-size: 17px;
+        line-height: 28px;
+    }
 }
 
 .font-light{
