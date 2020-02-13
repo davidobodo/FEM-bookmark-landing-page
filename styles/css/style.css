@@ -120,7 +120,9 @@ p {
     width: 100%;
     padding: 40px;
     text-align: center;
-    padding-top: 50px; }
+    padding-top: 50px;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(100vw); }
     .nav__links__brand {
       margin-bottom: 40px;
       display: flex;
