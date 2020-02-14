@@ -130,7 +130,9 @@ faqOne.addEventListener('click', handleDisplayFaqOne);
 faqTwo.addEventListener('click', handleDisplayFaqTwo);
 faqThree.addEventListener('click', handleDisplayFaqThree);
 faqFour.addEventListener('click', handleDisplayFaqFour);
-var errorContainer = document.querySelector('.input-container__error');
+var errorContainer = document.querySelector('.input-container');
+var input = document.querySelector('.input-container input');
+console.log(document.hasFocus());
 var handleSubmitForm = function (e) {
     e.preventDefault();
     console.log(form.input.value);
@@ -141,7 +143,7 @@ var handleSubmitForm = function (e) {
     }
     else {
         console.log('invalid');
-        show(errorContainer);
+        errorContainer.classList.add('error');
     }
 };
 var form = document.forms[0];

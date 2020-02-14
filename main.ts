@@ -169,7 +169,10 @@ faqThree.addEventListener('click', handleDisplayFaqThree)
 faqFour.addEventListener('click', handleDisplayFaqFour)
 
 
-const errorContainer = document.querySelector('.input-container__error');
+const errorContainer = document.querySelector('.input-container');
+const input: any = document.querySelector('.input-container input');
+
+console.log(document.hasFocus())
 
 const handleSubmitForm = (e) => {
     e.preventDefault();
@@ -180,9 +183,8 @@ const handleSubmitForm = (e) => {
         return alert('Thank you for successfully contacting us.')
     } else {
         console.log('invalid')
-        show(errorContainer)
+        errorContainer.classList.add('error');
     }
-
 }
 
 const form = document.forms[0];

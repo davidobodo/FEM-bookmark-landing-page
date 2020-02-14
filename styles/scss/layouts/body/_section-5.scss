@@ -50,51 +50,49 @@
                     margin-right: 20px;
                     flex: 1;
                 }
-                
-                input{
-                    font-size: 12px;
+
+                &__input-field{
+                    background-color: #ffffff;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: space-between;
                     padding: 15px;
-                    border-radius: 5px;
-                    border: none;
-                    width: 100%;
-                }
 
-                &__error{
-                    position: absolute;
-                    width: 100%;
-                    top: 0;
-                    bottom: -25px;
-                    border: 2px solid #fb5859;
-                    border-bottom: 25px solid #fb5859;
-                    border-radius: 5px;
-                    display: none;
+                    
+                    input{
+                        font-size: 12px;
+                        border: none;
+                        background-color: transparent;
+                        outline: none;
+                        flex: 1;
+                    }
 
-                    &:before{
-                        content: '!';
-                        position: absolute;
-                        background-color:#fb5859;
-                        color: #ffffff;
-                        width: 25px;
-                        height: 25px;
-                        border-radius: 50%;
+                    span{
+                        background-color: #fb5859;
+                        width: 20px;
+                        height: 20px;
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        right: 10px;
-                        top: 10px;
-                    }
+                        border-radius: 50%;
 
-                    &:after{
-                        content: "whoops, make sure it's an email";
-                        position: absolute;
+                        display: none;
+                    }
+                }
+
+                &__error-message{
+                        background-color: #fb5859;
                         color: #ffffff;
                         font-size: 12px;
-                        bottom: -20px;
-                        left: 15px;
                         font-style: italic;
                         font-weight: 600;
-                    }
-
+                        text-align: left;
+                        padding: 5px 15px;
+                        border-top-left-radius: 0px;
+                        border-top-right-radius: 0px;
+                        border-bottom-right-radius: 5px;
+                        border-bottom-left-radius: 5px;
+                        display: none;
                 }
             }
 
@@ -102,5 +100,24 @@
                 opacity: 0.4;
             }
         }
+    }
+}
+
+.error{
+
+    .input-container__input-field{
+        border: 3px solid #fb5859;
+        border-top-left-radius: 5px !important;
+        border-top-right-radius: 5px !important;
+        border-bottom-right-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
+
+        span{
+            display: inline !important;
+        }
+    }
+
+    .input-container__error-message{
+        display: block !important;
     }
 }
