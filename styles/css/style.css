@@ -472,7 +472,8 @@ p {
           border-bottom: 3px solid #5266df;
           width: 13px;
           height: 13px;
-          transform: rotate(-45deg); }
+          transform: rotate(-45deg);
+          transition: transform 0.25s ease-in-out; }
           @media (min-width: 765px) {
             .section__four__faqs__faq__title .dropdown-direction {
               margin-right: 30px; } }
@@ -480,6 +481,10 @@ p {
         text-align: left;
         margin-top: 30px;
         display: none; }
+
+.arrow-up {
+  transform: rotate(135deg) !important;
+  border-color: red !important; }
 
 .section__five {
   background-color: #5266df;

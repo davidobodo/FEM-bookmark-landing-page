@@ -93,40 +93,57 @@ const hide = (elem) => {
     elem.style.display = 'none';
 }
 
+const moveArrowUp = (elem) => {
+    console.log(elem)
+    elem.classList.add('arrow-up')
+}
+
+const moveArrowDown = (elem) => {
+    elem.classList.remove('arrow-up')
+}
+
 
 const handleDisplayFaqOne = (e) => {
     e.preventDefault();
     if (window.getComputedStyle(faqOneDetails).display === 'block') {
         hide(faqOneDetails);
+        moveArrowDown(faqOneDirection);
         return;
     }
     show(faqOneDetails)
+    moveArrowUp(faqOneDirection);
 }
 const handleDisplayFaqTwo = (e) => {
     e.preventDefault();
     if (window.getComputedStyle(faqTwoDetails).display === 'block') {
         hide(faqTwoDetails);
+        moveArrowDown(faqTwoDirection);
         return;
     }
-    show(faqTwoDetails)
+    show(faqTwoDetails);
+    moveArrowUp(faqTwoDirection);
 
 }
 const handleDisplayFaqThree = (e) => {
     e.preventDefault();
     if (window.getComputedStyle(faqThreeDetails).display === 'block') {
         hide(faqThreeDetails);
+        moveArrowDown(faqThreeDirection);
         return;
     }
-    show(faqThreeDetails)
+    show(faqThreeDetails);
+    moveArrowUp(faqThreeDirection);
 
 }
 const handleDisplayFaqFour = (e) => {
     e.preventDefault();
     if (window.getComputedStyle(faqFourDetails).display === 'block') {
         hide(faqFourDetails);
+        moveArrowDown(faqFourDirection);
         return;
     }
-    show(faqFourDetails)
+    show(faqFourDetails);
+    moveArrowUp(faqFourDirection);
 
 }
 
@@ -140,6 +157,13 @@ const faqOneDetails: HTMLElement = document.querySelector('#faq-one .section__fo
 const faqTwoDetails: HTMLElement = document.querySelector('#faq-two .section__four__faqs__faq__details');
 const faqThreeDetails: HTMLElement = document.querySelector('#faq-three .section__four__faqs__faq__details');
 const faqFourDetails: HTMLElement = document.querySelector('#faq-four .section__four__faqs__faq__details');
+
+const faqOneDirection: HTMLElement = document.querySelector('#faq-one .dropdown-direction');
+const faqTwoDirection: HTMLElement = document.querySelector('#faq-two .dropdown-direction');
+const faqThreeDirection: HTMLElement = document.querySelector('#faq-three .dropdown-direction');
+const faqFourDirection: HTMLElement = document.querySelector('#faq-four .dropdown-direction');
+
+console.log(faqOneDirection);
 
 faqOne.addEventListener('click', handleDisplayFaqOne)
 faqTwo.addEventListener('click', handleDisplayFaqTwo)

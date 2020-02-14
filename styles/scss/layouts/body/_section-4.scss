@@ -59,6 +59,7 @@
                     width: 13px;
                     height: 13px;
                     transform: rotate(-45deg);
+                    transition: transform 0.25s ease-in-out;
                     
                     @media(min-width: 765px){
                         margin-right: 30px;
@@ -74,4 +75,9 @@
         }
         
     }
+}
+
+.arrow-up{
+    transform: rotate(135deg) !important;
+    border-color: red !important;
 }
