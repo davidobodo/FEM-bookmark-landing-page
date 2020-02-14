@@ -73,11 +73,15 @@ p {
 .btn-red {
   font-size: 12px;
   font-weight: 600;
-  padding: 15px;
+  padding: 14px;
   border-radius: 5px;
   border: none;
   background-color: #fb5859;
-  color: #ffffff !important; }
+  color: #ffffff; }
+  .btn-red:hover {
+    color: #fb5859;
+    background-color: #ffffff;
+    border: 1px solid #fb5859; }
 
 .nav {
   padding-left: 30px;
@@ -518,16 +522,50 @@ p {
       .section__five__container form {
         flex-direction: row;
         align-items: baseline; } }
-    .section__five__container form input {
-      font-size: 12px;
-      padding: 15px;
-      border-radius: 5px;
-      border: none;
+    .section__five__container form .input-container {
+      position: relative;
       margin-bottom: 20px; }
       @media (min-width: 765px) {
-        .section__five__container form input {
+        .section__five__container form .input-container {
           margin-right: 20px;
           flex: 1; } }
+      .section__five__container form .input-container input {
+        font-size: 12px;
+        padding: 15px;
+        border-radius: 5px;
+        border: none;
+        width: 100%; }
+      .section__five__container form .input-container__error {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: -25px;
+        border: 2px solid #fb5859;
+        border-bottom: 25px solid #fb5859;
+        border-radius: 5px;
+        display: none; }
+        .section__five__container form .input-container__error:before {
+          content: '!';
+          position: absolute;
+          background-color: #fb5859;
+          color: #ffffff;
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          right: 10px;
+          top: 10px; }
+        .section__five__container form .input-container__error:after {
+          content: "whoops, make sure it's an email";
+          position: absolute;
+          color: #ffffff;
+          font-size: 12px;
+          bottom: -20px;
+          left: 15px;
+          font-style: italic;
+          font-weight: 600; }
     .section__five__container form ::placeholder {
       opacity: 0.4; }
 
@@ -579,7 +617,6 @@ p {
   overflow-x: hidden; }
   @media (min-width: 765px) {
     .wrapper {
-      padding-top: 80px;
-      border: 5px solid green; } }
+      padding-top: 80px; } }
 
 /*# sourceMappingURL=style.css.map */

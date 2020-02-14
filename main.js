@@ -69,7 +69,6 @@ var hide = function (elem) {
     elem.style.display = 'none';
 };
 var moveArrowUp = function (elem) {
-    console.log(elem);
     elem.classList.add('arrow-up');
 };
 var moveArrowDown = function (elem) {
@@ -127,8 +126,23 @@ var faqOneDirection = document.querySelector('#faq-one .dropdown-direction');
 var faqTwoDirection = document.querySelector('#faq-two .dropdown-direction');
 var faqThreeDirection = document.querySelector('#faq-three .dropdown-direction');
 var faqFourDirection = document.querySelector('#faq-four .dropdown-direction');
-console.log(faqOneDirection);
 faqOne.addEventListener('click', handleDisplayFaqOne);
 faqTwo.addEventListener('click', handleDisplayFaqTwo);
 faqThree.addEventListener('click', handleDisplayFaqThree);
 faqFour.addEventListener('click', handleDisplayFaqFour);
+var errorContainer = document.querySelector('.input-container__error');
+var handleSubmitForm = function (e) {
+    e.preventDefault();
+    console.log(form.input.value);
+    var value = form.input.value;
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+        console.log('valid');
+        return alert('Thank you for successfully contacting us.');
+    }
+    else {
+        console.log('invalid');
+        show(errorContainer);
+    }
+};
+var form = document.forms[0];
+form.addEventListener('submit', handleSubmitForm);

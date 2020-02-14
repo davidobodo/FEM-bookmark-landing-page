@@ -94,7 +94,6 @@ const hide = (elem) => {
 }
 
 const moveArrowUp = (elem) => {
-    console.log(elem)
     elem.classList.add('arrow-up')
 }
 
@@ -163,9 +162,29 @@ const faqTwoDirection: HTMLElement = document.querySelector('#faq-two .dropdown-
 const faqThreeDirection: HTMLElement = document.querySelector('#faq-three .dropdown-direction');
 const faqFourDirection: HTMLElement = document.querySelector('#faq-four .dropdown-direction');
 
-console.log(faqOneDirection);
 
 faqOne.addEventListener('click', handleDisplayFaqOne)
 faqTwo.addEventListener('click', handleDisplayFaqTwo)
 faqThree.addEventListener('click', handleDisplayFaqThree)
 faqFour.addEventListener('click', handleDisplayFaqFour)
+
+
+const errorContainer = document.querySelector('.input-container__error');
+
+const handleSubmitForm = (e) => {
+    e.preventDefault();
+    console.log(form.input.value)
+    const value = form.input.value;
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+        console.log('valid')
+        return alert('Thank you for successfully contacting us.')
+    } else {
+        console.log('invalid')
+        show(errorContainer)
+    }
+
+}
+
+const form = document.forms[0];
+
+form.addEventListener('submit', handleSubmitForm);
