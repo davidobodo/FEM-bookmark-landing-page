@@ -4,6 +4,9 @@ var mobile_nav = document.querySelector('.nav__links');
 var tab1title = document.querySelector('.tab-1-title');
 var tab2title = document.querySelector('.tab-2-title');
 var tab3title = document.querySelector('.tab-3-title');
+var tab1titleUnderline = document.querySelector('.tab-1-title span');
+var tab2titleUnderline = document.querySelector('.tab-2-title span');
+var tab3titleUnderline = document.querySelector('.tab-3-title span');
 var tab1 = document.querySelector('#tab-1');
 var tab2 = document.querySelector('#tab-2');
 var tab3 = document.querySelector('#tab-3');
@@ -24,6 +27,9 @@ var handleDisplayTabOne = function () {
     else {
         tab1.style.display = 'flex';
     }
+    tab1titleUnderline.style.display = 'inline';
+    tab2titleUnderline.style.display = 'none';
+    tab3titleUnderline.style.display = 'none';
 };
 var handleDisplayTabTwo = function () {
     tab1.style.display = 'none';
@@ -34,6 +40,9 @@ var handleDisplayTabTwo = function () {
     else {
         tab2.style.display = 'flex';
     }
+    tab1titleUnderline.style.display = 'none';
+    tab2titleUnderline.style.display = 'inline';
+    tab3titleUnderline.style.display = 'none';
 };
 var handleDisplayTabThree = function () {
     tab1.style.display = 'none';
@@ -44,6 +53,9 @@ var handleDisplayTabThree = function () {
     else {
         tab3.style.display = 'flex';
     }
+    tab1titleUnderline.style.display = 'none';
+    tab2titleUnderline.style.display = 'none';
+    tab3titleUnderline.style.display = 'inline';
 };
 handleDisplayTabOne();
 tab1title.addEventListener('click', handleDisplayTabOne);

@@ -6,6 +6,11 @@ const tab1title = document.querySelector('.tab-1-title');
 const tab2title = document.querySelector('.tab-2-title');
 const tab3title = document.querySelector('.tab-3-title');
 
+const tab1titleUnderline: HTMLElement = document.querySelector('.tab-1-title span');
+const tab2titleUnderline: HTMLElement = document.querySelector('.tab-2-title span');
+const tab3titleUnderline: HTMLElement = document.querySelector('.tab-3-title span');
+
+
 const tab1: HTMLElement = document.querySelector('#tab-1');
 const tab2: HTMLElement = document.querySelector('#tab-2');
 const tab3: HTMLElement = document.querySelector('#tab-3');
@@ -26,12 +31,18 @@ const handleDisplayTabOne = () => {
     tab2.style.display = 'none';
     tab3.style.display = 'none';
 
+
+
     if (window.screen.width <= 765) {
         tab1.style.display = 'block';
 
     } else {
         tab1.style.display = 'flex';
     }
+
+    tab1titleUnderline.style.display = 'inline';
+    tab2titleUnderline.style.display = 'none';
+    tab3titleUnderline.style.display = 'none';
 }
 
 const handleDisplayTabTwo = () => {
@@ -44,6 +55,10 @@ const handleDisplayTabTwo = () => {
     } else {
         tab2.style.display = 'flex';
     }
+
+    tab1titleUnderline.style.display = 'none';
+    tab2titleUnderline.style.display = 'inline';
+    tab3titleUnderline.style.display = 'none';
 }
 
 const handleDisplayTabThree = () => {
@@ -56,6 +71,10 @@ const handleDisplayTabThree = () => {
     } else {
         tab3.style.display = 'flex';
     }
+
+    tab1titleUnderline.style.display = 'none';
+    tab2titleUnderline.style.display = 'none';
+    tab3titleUnderline.style.display = 'inline';
 }
 
 handleDisplayTabOne();

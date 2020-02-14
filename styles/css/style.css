@@ -319,8 +319,7 @@ p {
       @media (min-width: 765px) {
         .section__one__list li:first-child {
           border-top: 0; } }
-    .section__one__list li:after {
-      content: '';
+    .section__one__list li span {
       width: 130px;
       height: 5px;
       background-color: #fc5859;
@@ -329,7 +328,7 @@ p {
       transform: translateX(-50%);
       bottom: 0; }
       @media (min-width: 765px) {
-        .section__one__list li:after {
+        .section__one__list li span {
           width: 100%; } }
 
 .section__two {
