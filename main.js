@@ -10,6 +10,7 @@ var tab3titleUnderline = document.querySelector('.tab-3-title span');
 var tab1 = document.querySelector('#tab-1');
 var tab2 = document.querySelector('#tab-2');
 var tab3 = document.querySelector('#tab-3');
+var faqs = document.querySelectorAll('.section__four__faqs__faq');
 var handleShowMobileNavbar = function () {
     mobile_nav.style.transform = 'translateX(0px)';
 };
@@ -61,3 +62,53 @@ handleDisplayTabOne();
 tab1title.addEventListener('click', handleDisplayTabOne);
 tab2title.addEventListener('click', handleDisplayTabTwo);
 tab3title.addEventListener('click', handleDisplayTabThree);
+var show = function (elem) {
+    elem.style.display = 'block';
+};
+var hide = function (elem) {
+    elem.style.display = 'none';
+};
+var handleDisplayFaqOne = function (e) {
+    e.preventDefault();
+    if (window.getComputedStyle(faqOneDetails).display === 'block') {
+        hide(faqOneDetails);
+        return;
+    }
+    show(faqOneDetails);
+};
+var handleDisplayFaqTwo = function (e) {
+    e.preventDefault();
+    if (window.getComputedStyle(faqTwoDetails).display === 'block') {
+        hide(faqTwoDetails);
+        return;
+    }
+    show(faqTwoDetails);
+};
+var handleDisplayFaqThree = function (e) {
+    e.preventDefault();
+    if (window.getComputedStyle(faqThreeDetails).display === 'block') {
+        hide(faqThreeDetails);
+        return;
+    }
+    show(faqThreeDetails);
+};
+var handleDisplayFaqFour = function (e) {
+    e.preventDefault();
+    if (window.getComputedStyle(faqFourDetails).display === 'block') {
+        hide(faqFourDetails);
+        return;
+    }
+    show(faqFourDetails);
+};
+var faqOne = document.querySelector('#faq-one');
+var faqTwo = document.querySelector('#faq-two');
+var faqThree = document.querySelector('#faq-three');
+var faqFour = document.querySelector('#faq-four');
+var faqOneDetails = document.querySelector('#faq-one .section__four__faqs__faq__details');
+var faqTwoDetails = document.querySelector('#faq-two .section__four__faqs__faq__details');
+var faqThreeDetails = document.querySelector('#faq-three .section__four__faqs__faq__details');
+var faqFourDetails = document.querySelector('#faq-four .section__four__faqs__faq__details');
+faqOne.addEventListener('click', handleDisplayFaqOne);
+faqTwo.addEventListener('click', handleDisplayFaqTwo);
+faqThree.addEventListener('click', handleDisplayFaqThree);
+faqFour.addEventListener('click', handleDisplayFaqFour);
