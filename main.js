@@ -30,68 +30,23 @@ var tab3titleUnderline = document.querySelector('.tab-3-title span');
 var tab1details = document.querySelector('#tab-1');
 var tab2details = document.querySelector('#tab-2');
 var tab3details = document.querySelector('#tab-3');
-// const handleDisplayTab = (
-//         showTab,
-//         showTabLine, 
-//         hideFirstTab,
-//         hideFirstTabLine,
-//         hidesecondTab,
-//         hideSecondTabLine,
-//     ) => {
-//     if (window.screen.width <= 765) {
-//         showTab.style.display = 'block';
-//     } else {
-//         showTab.style.display = 'flex';
-//     }
-//     showTabLine.style.display = 'inline';
-//     hideFirstTab.style.display = 'none';
-//     hideFirstTabLine.style.display = 'none';
-//     hidesecondTab.style.display = 'none';
-//     hideSecondTabLine.style.display = 'none';
-// }
-var handleDisplayTabOne = function () {
+var handleDisplayTab = function (showTab, showTabLine, hideFirstTab, hideFirstTabLine, hidesecondTab, hideSecondTabLine) {
     if (window.screen.width <= 765) {
-        tab1details.style.display = 'block';
+        showTab.style.display = 'block';
     }
     else {
-        tab1details.style.display = 'flex';
+        showTab.style.display = 'flex';
     }
-    tab1titleUnderline.style.display = 'inline';
-    tab2details.style.display = 'none';
-    tab2titleUnderline.style.display = 'none';
-    tab3details.style.display = 'none';
-    tab3titleUnderline.style.display = 'none';
+    showTabLine.style.display = 'inline';
+    hideFirstTab.style.display = 'none';
+    hideFirstTabLine.style.display = 'none';
+    hidesecondTab.style.display = 'none';
+    hideSecondTabLine.style.display = 'none';
 };
-var handleDisplayTabTwo = function () {
-    tab1details.style.display = 'none';
-    tab1titleUnderline.style.display = 'none';
-    if (window.screen.width <= 765) {
-        tab2details.style.display = 'block';
-    }
-    else {
-        tab2details.style.display = 'flex';
-    }
-    tab2titleUnderline.style.display = 'inline';
-    tab3details.style.display = 'none';
-    tab3titleUnderline.style.display = 'none';
-};
-var handleDisplayTabThree = function () {
-    tab1details.style.display = 'none';
-    tab1titleUnderline.style.display = 'none';
-    tab2details.style.display = 'none';
-    tab2titleUnderline.style.display = 'none';
-    if (window.screen.width <= 765) {
-        tab3details.style.display = 'block';
-    }
-    else {
-        tab3details.style.display = 'flex';
-    }
-    tab3titleUnderline.style.display = 'inline';
-};
-handleDisplayTabOne();
-tab1title.addEventListener('click', handleDisplayTabOne);
-tab2title.addEventListener('click', handleDisplayTabTwo);
-tab3title.addEventListener('click', handleDisplayTabThree);
+tab1title.addEventListener('click', function (e) { return handleDisplayTab(tab1details, tab1titleUnderline, tab2details, tab2titleUnderline, tab3details, tab3titleUnderline); });
+tab2title.addEventListener('click', function (e) { return handleDisplayTab(tab2details, tab2titleUnderline, tab1details, tab1titleUnderline, tab3details, tab3titleUnderline); });
+tab3title.addEventListener('click', function (e) { return handleDisplayTab(tab3details, tab3titleUnderline, tab2details, tab2titleUnderline, tab1details, tab1titleUnderline); });
+handleDisplayTab(tab1details, tab1titleUnderline, tab2details, tab2titleUnderline, tab3details, tab3titleUnderline);
 // Tabs Logic(End)
 //----------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------
