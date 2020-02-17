@@ -1,12 +1,12 @@
 .section__one{
     text-align: center;
-    padding-left: $pad-left;
-    padding-right: $pad-right;
+    padding-left: $mobile-side-padding;
+    padding-right: $mobile-side-padding;
     margin-bottom: 80px;
 
     @media(min-width: 765px){
-        padding-left: $pad-left-desktop;
-        padding-right: $pad-right-desktop;
+        padding-left: $desktop-side-padding;
+        padding-right: $desktop-side-padding;
     }
 
     h3{

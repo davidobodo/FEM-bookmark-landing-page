@@ -44,6 +44,17 @@ p{
     }
 }
 
+
+// not yet in full effect. Would be once i see the value is consistent at all points
+// a{
+//     font-size: 18px;
+//     
+//     @media(min-width: 765px){
+//          font-size: 14px;
+//     }
+//
+// }
+
 .font-light{
     font-weight: 200 !important;
 }

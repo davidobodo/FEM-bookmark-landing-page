@@ -16,11 +16,11 @@
 .wrapper{
     max-width: 1440px;
     margin: 0 auto;
-    padding-top: $pad-top;
+    padding-top: $mobile-top-padding;
     overflow-x: hidden;
 
     @media(min-width: 765px){
-        padding-top: $pad-top-desktop;
+        padding-top: $desktop-top-padding;
     }
 }
 

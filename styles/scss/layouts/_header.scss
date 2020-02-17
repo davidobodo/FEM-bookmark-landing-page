@@ -1,12 +1,12 @@
 .header{
     text-align: center;
     margin-bottom: 150px;
-    padding-left: $pad-left;
-    padding-right: $pad-right;
+    padding-left: $mobile-side-padding;
+    padding-right: $mobile-side-padding;
 
     @media(min-width: 765px){
-        padding-left: $pad-left-desktop;
-        padding-right: $pad-right-desktop;
+        padding-left: $desktop-side-padding;
+        padding-right: $desktop-side-padding;
         display: flex;
         align-items: center;
         height: 400px;

@@ -178,6 +178,7 @@ const handleSubmitForm = (e) => {
     e.preventDefault();
     console.log(form.input.value)
     const value = form.input.value;
+    //email validator
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
         console.log('valid')
         return alert('Thank you for successfully contacting us.')
