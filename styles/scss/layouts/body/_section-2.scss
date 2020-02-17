@@ -1,5 +1,4 @@
 .section__two{
-    text-align: center;
     margin-bottom: 150px;
     padding-left: $mobile-side-padding;
     padding-right: $mobile-side-padding;
@@ -38,11 +37,11 @@
 
         img{
             width: 100%;
-
         }
     }
 
     &__info{
+        text-align: center;
 
         @media(min-width: 765px){
             flex: 0 0 50%;
