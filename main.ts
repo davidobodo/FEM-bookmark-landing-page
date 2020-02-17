@@ -42,6 +42,30 @@ const tab1details: HTMLElement = document.querySelector('#tab-1');
 const tab2details: HTMLElement = document.querySelector('#tab-2');
 const tab3details: HTMLElement = document.querySelector('#tab-3');
 
+// const handleDisplayTab = (
+//         showTab,
+//         showTabLine, 
+//         hideFirstTab,
+//         hideFirstTabLine,
+//         hidesecondTab,
+//         hideSecondTabLine,
+//     ) => {
+//     if (window.screen.width <= 765) {
+//         showTab.style.display = 'block';
+//     } else {
+//         showTab.style.display = 'flex';
+//     }
+//     showTabLine.style.display = 'inline';
+
+
+//     hideFirstTab.style.display = 'none';
+//     hideFirstTabLine.style.display = 'none';
+
+
+//     hidesecondTab.style.display = 'none';
+//     hideSecondTabLine.style.display = 'none';
+// }
+
 const handleDisplayTabOne = () => {
     if (window.screen.width <= 765) {
         tab1details.style.display = 'block';
@@ -144,56 +168,21 @@ const moveArrowDown = (elem) => {
     elem.classList.remove('arrow-up')
 }
 
-
-const handleDisplayFaqOne = (e) => {
+const handleDisplayFaq = (e: any, details: any, direction: any) => {
     e.preventDefault();
-    if (window.getComputedStyle(faqOneDetails).display === 'block') {
-        hide(faqOneDetails);
-        moveArrowDown(faqOneDirection);
+    if (window.getComputedStyle(details).display === 'block') {
+        hide(details);
+        moveArrowDown(direction);
         return;
     }
-    show(faqOneDetails)
-    moveArrowUp(faqOneDirection);
-}
-const handleDisplayFaqTwo = (e) => {
-    e.preventDefault();
-    if (window.getComputedStyle(faqTwoDetails).display === 'block') {
-        hide(faqTwoDetails);
-        moveArrowDown(faqTwoDirection);
-        return;
-    }
-    show(faqTwoDetails);
-    moveArrowUp(faqTwoDirection);
-
-}
-const handleDisplayFaqThree = (e) => {
-    e.preventDefault();
-    if (window.getComputedStyle(faqThreeDetails).display === 'block') {
-        hide(faqThreeDetails);
-        moveArrowDown(faqThreeDirection);
-        return;
-    }
-    show(faqThreeDetails);
-    moveArrowUp(faqThreeDirection);
-
-}
-const handleDisplayFaqFour = (e) => {
-    e.preventDefault();
-    if (window.getComputedStyle(faqFourDetails).display === 'block') {
-        hide(faqFourDetails);
-        moveArrowDown(faqFourDirection);
-        return;
-    }
-    show(faqFourDetails);
-    moveArrowUp(faqFourDirection);
-
+    show(details)
+    moveArrowUp(direction);
 }
 
-
-faqOne.addEventListener('click', handleDisplayFaqOne)
-faqTwo.addEventListener('click', handleDisplayFaqTwo)
-faqThree.addEventListener('click', handleDisplayFaqThree)
-faqFour.addEventListener('click', handleDisplayFaqFour)
+faqOne.addEventListener('click', (e) => handleDisplayFaq(e, faqOneDetails, faqOneDirection))
+faqTwo.addEventListener('click', (e) => handleDisplayFaq(e, faqTwoDetails, faqTwoDirection))
+faqThree.addEventListener('click', (e) => handleDisplayFaq(e, faqThreeDetails, faqThreeDirection))
+faqFour.addEventListener('click', (e) => handleDisplayFaq(e, faqFourDetails, faqFourDirection))
 
 // FAQ Logic (end)
 //----------------------------------------------------------------------------------------
