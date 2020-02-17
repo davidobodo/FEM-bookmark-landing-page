@@ -1,10 +1,9 @@
 .header{
-    text-align: center;
     margin-bottom: 150px;
     padding-left: $mobile-side-padding;
     padding-right: $mobile-side-padding;
 
-    @media(min-width: 765px){
+    @media(min-width: $mobile-breakpoint){
         padding-left: $desktop-side-padding;
         padding-right: $desktop-side-padding;
         display: flex;
@@ -16,11 +15,10 @@
         position: relative;
         margin-bottom: 70px;
 
-        @media(min-width: 765px){
+        @media(min-width: $mobile-breakpoint){
             order: 1;
             flex: 0 0 50%;
         }
-       
 
         &:after{
             content: '';
@@ -34,7 +32,7 @@
             border-bottom-left-radius: 200px;
             z-index: -1;
 
-            @media(min-width: 765px){
+            @media(min-width: $mobile-breakpoint){
                 left: 146px;
             }
         }
@@ -45,8 +43,9 @@
     }
 
     &__info{
+        text-align: center;
 
-        @media(min-width: 765px){
+        @media(min-width: $mobile-breakpoint){
             flex: 0 0 50%;
             padding-right: 150px;
             text-align: left;
@@ -55,7 +54,7 @@
         h2{
             margin-bottom: 30px;
 
-            @media(min-width: 765px){
+            @media(min-width: $mobile-breakpoint){
                 font-size: 34px;
             }
         }
@@ -68,7 +67,7 @@
             display: flex;
             justify-content: space-around;
 
-            @media(min-width: 765px){
+            @media(min-width: $mobile-breakpoint){
                 display: block;
                 
                 button:first-child{

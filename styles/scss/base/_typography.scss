@@ -6,6 +6,13 @@ h1{
 h2{
     font-size: 30px;
     font-weight: bold;
+
+//------------------------------------------------------------
+//still on check
+//     @media(min-width: $mobile-breakpoint){
+//         font-size: 34px;
+//     }
+//------------------------------------------------------------
 }
 
 h3{
@@ -44,7 +51,7 @@ p{
     }
 }
 
-
+//-------------------------------------------------------------
 // not yet in full effect. Would be once i see the value is consistent at all points
 // a{
 //     font-size: 18px;
@@ -54,6 +61,7 @@ p{
 //     }
 //
 // }
+//-------------------------------------------------------------
 
 .font-light{
     font-weight: 200 !important;
