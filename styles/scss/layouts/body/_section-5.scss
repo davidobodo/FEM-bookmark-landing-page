@@ -2,10 +2,7 @@
     background-color: #5266df;
     color: #ffffff;
     text-align: center;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    padding-left: $mobile-side-padding;
-    padding-right: $mobile-side-padding;
+    padding: 80px $mobile-side-padding;
 
     &__container{
 
@@ -75,7 +72,6 @@
                         justify-content: center;
                         align-items: center;
                         border-radius: 50%;
-
                         display: none;
                     }
                 }

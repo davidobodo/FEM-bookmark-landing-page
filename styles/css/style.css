@@ -493,10 +493,7 @@ p {
   background-color: #5266df;
   color: #ffffff;
   text-align: center;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  padding-left: 30px;
-  padding-right: 30px; }
+  padding: 80px 30px; }
   @media (min-width: 765px) {
     .section__five__container {
       width: 460px;
