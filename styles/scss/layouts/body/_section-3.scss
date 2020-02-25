@@ -8,6 +8,9 @@
     @media(min-width: $mobile-breakpoint){
         padding-left: $desktop-side-padding;
         padding-right: $desktop-side-padding;
+        max-width: 1440px;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     h3{
@@ -59,16 +62,24 @@
                 margin-bottom: 10px;
             }
 
+            p{
+                margin-bottom: 15px;
+            }
+
             hr{
                 height: 14px;
                 overflow: hidden;
                 border: none;
-                margin-bottom: 35px;
+                margin-bottom: 20px;
 
                 &:after{
                     content: '.........................................';
                     letter-spacing: 12px;
                 }
+            }
+
+            .btn{
+                width: 80%;
             }
 
         

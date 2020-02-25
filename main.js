@@ -104,6 +104,7 @@ faqFour.addEventListener('click', function (e) { return handleDisplayFaq(e, faqF
 var errorContainer = document.querySelector('.input-container');
 var input = document.querySelector('.input-container input');
 var form = document.forms[0];
+var showError = false;
 var handleSubmitForm = function (e) {
     e.preventDefault();
     console.log(form.input.value);
@@ -115,9 +116,19 @@ var handleSubmitForm = function (e) {
     }
     else {
         console.log('invalid');
+        showError = true;
         errorContainer.classList.add('error');
     }
 };
+function handleKeyDown(e) {
+    var key = e.key;
+    if (!showError || key === "Enter")
+        return;
+    console.log('CALLING');
+    errorContainer.classList.remove('error');
+    showError = false;
+}
+form.input.addEventListener('keydown', handleKeyDown);
 form.addEventListener('submit', handleSubmitForm);
 // Form Logic (end)
 //----------------------------------------------------------------------------------------

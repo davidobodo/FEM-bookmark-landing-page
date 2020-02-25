@@ -178,6 +178,8 @@ faqFour.addEventListener('click', (e) => handleDisplayFaq(e, faqFourDetails, faq
 const errorContainer = document.querySelector('.input-container');
 const input: any = document.querySelector('.input-container input');
 const form = document.forms[0];
+let showError = false;
+
 
 const handleSubmitForm = (e) => {
     e.preventDefault();
@@ -189,10 +191,21 @@ const handleSubmitForm = (e) => {
         return alert('Thank you for successfully contacting us.')
     } else {
         console.log('invalid')
+        showError = true;
         errorContainer.classList.add('error');
     }
 }
 
+function handleKeyDown(e: KeyboardEvent) {
+    const key = e.key;
+    if (!showError || key === "Enter") return;
+
+    console.log('CALLING')
+    errorContainer.classList.remove('error');
+    showError = false;
+}
+
+form.input.addEventListener('keydown', handleKeyDown);
 form.addEventListener('submit', handleSubmitForm);
 
 // Form Logic (end)

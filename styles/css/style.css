@@ -394,7 +394,10 @@ p {
   @media (min-width: 765px) {
     .section__three {
       padding-left: 10vw;
-      padding-right: 10vw; } }
+      padding-right: 10vw;
+      max-width: 1440px;
+      margin-right: auto;
+      margin-left: auto; } }
   .section__three h3 {
     margin-bottom: 15px; }
   .section__three__subtitle {
@@ -425,14 +428,18 @@ p {
       margin-bottom: 30px; }
     .section__three__cards-container .cards h4 {
       margin-bottom: 10px; }
+    .section__three__cards-container .cards p {
+      margin-bottom: 15px; }
     .section__three__cards-container .cards hr {
       height: 14px;
       overflow: hidden;
       border: none;
-      margin-bottom: 35px; }
+      margin-bottom: 20px; }
       .section__three__cards-container .cards hr:after {
         content: '.........................................';
         letter-spacing: 12px; }
+    .section__three__cards-container .cards .btn {
+      width: 80%; }
 
 .section__four {
   text-align: center;
@@ -615,7 +622,6 @@ p {
         width: auto; } }
 
 .wrapper {
-  max-width: 1440px;
   margin: 0 auto;
   padding-top: 50px;
   overflow-x: hidden; }
